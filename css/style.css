@@ -1,0 +1,322 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #333;
+    transition: background 0.3s ease;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 1em 0;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    z-index: 1100;
+    margin-top: -70px ;
+}
+
+header.scrolled {
+  background: rgba(51, 51, 51, 0.7);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    flex: 1;
+    text-align: center;
+    margin: 0;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+
+.logo-left, .logo-right {
+    width: 50px;  /* Sesuaikan ukuran logo */
+    height: auto;
+}
+
+.logo-left {
+    margin-left: 20px;
+}
+
+.logo-right {
+    margin-right: 20px;
+}
+
+
+section {
+    padding: 24px;
+    margin: 24px;
+    background: #fff;
+    border-radius: 8px;
+}
+
+#home {
+  background-image: url(/assets/backgroundhmti3.jpg);
+  border-image: fill 0 linear-gradient(rgba(217, 214, 214, 0.2),#000);
+  background-size: cover;
+  object-fit: cover;
+  z-index: 1000;
+  height: 70vh;
+  margin-top: 70px;
+}
+
+#about{
+  margin-top: 100px;
+}
+
+#about h2{
+  text-align: center;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+#about h3{
+  text-align: center;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+#about p{
+  text-align: center;
+}
+
+#element {
+  font-size: 28px;
+  font-weight: bold;
+  color: #ffffff; /* Sesuaikan warna teks */
+  text-shadow: 0 2px 4px  rgb(6, 31, 255); /* Efek bayangan */
+  text-align: center;
+  align-items: center;
+}
+
+
+
+#home {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	font-size: 2em;
+	color: #fff;
+  text-align: center;
+	text-transform: uppercase;
+	gap: 30px;
+}
+  
+  .instagram-icon img {
+    width: 40px; /* Ukuran ikon */
+    height: 40px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.instagram-icon img:hover {
+    transform: scale(1.2); /* Efek zoom saat di-hover */
+    opacity: 0.8; /* Efek transparansi saat di-hover */
+}
+
+#programs {
+  text-align: center;
+}
+
+#news {
+  text-align: center;
+  padding: 20px;
+  background: #f9f9f9;
+}
+
+#news h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.programs-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.program-item {
+  position: relative;
+  width: 200px;
+  height: 150px;
+  overflow: hidden;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+.program-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.program-item .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  text-align: center;
+  padding: 10px;
+}
+
+.program-item:hover img {
+  transform: scale(1.1);
+}
+
+.program-item:hover .overlay {
+  opacity: 1;
+}
+
+.pengurus {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.left-column, .right-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.profile {
+  text-align: center;
+}
+
+.profile img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.profile img:hover {
+  transform: scale(1.2); /* Efek zoom saat di-hover */
+  opacity: 0.8; /* Efek transparansi saat di-hover */
+}
+
+.profile .name {
+  font-size: 1em;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.profile .position {
+  font-size: 0.9em;
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .pengurus {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .left-column, .right-column {
+      width: 100%;
+  }
+}
+
+/* Modal Styles */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+}
+
+/* Modal Content (Image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#modalName {
+  text-align: center;
+  color: #fff;
+  font-size: 1.5em;
+  margin-top: 10px;
+}
+
+#modalPosition {
+  text-align: center;
+  color: #ccc;
+  font-size: 1.2em;
+  margin-top: 5px;
+}
+
+/* Caption for Modal */
+#caption {
+  margin: 15px auto;
+  text-align: center;
+  color: #fff;
+  font-size: 1.2em;
+}
+
+/* Close Button */
+.close {
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  color: #fff;
+  font-size: 35px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background: #333;
+  color: white;
+}

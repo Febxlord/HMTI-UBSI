@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kegiatan 1 - HMTI UBSI</title>
+    <link rel="stylesheet" href="css/stylek1.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="container">
+            <h1 class="text-shadow">HMTI UBSI</h1>
+            <p class="text-shadow">Jakarta, 15 Oktober 2024</p>
+        </div>
+    </section>
+
+    <section id="gallery">
+        <h2 data-aos="fade-up" data-aos-duration="1000"></h2>
+        <div class="gallery-container">
+            <div class="gallery-item" data-aos="zoom-in" data-aos-duration="1000">
+                <img src="kegiatan1/kegiatan1.jpg" alt="Foto 1" onclick="openModal(this)">
+                <p class="caption">HMTI DPC UBSI Pemuda, Dewi Sartika B, dan Kramat 98</p>
+            </div>
+            <div class="gallery-item" data-aos="zoom-in" data-aos-duration="1000">
+                <img src="kegiatan1/kegiatan1-1.jpg" alt="Foto 2" onclick="openModal(this)">
+                <p class="caption">HMTI DPC UBSI Cengkareng</p>
+            </div>
+            <div class="gallery-item" data-aos="zoom-in" data-aos-duration="1000">
+                <img src="kegiatan1/kegiatan1-2.jpg" alt="Foto 3" onclick="openModal(this)">
+                <p class="caption">HMTI DPC UBSI Kaliabang</p>
+            </div>
+            <div class="gallery-item" data-aos="zoom-in" data-aos-duration="1000">
+                <img src="kegiatan1/kegiatan1-3.jpg" alt="Foto 3" onclick="openModal(this)">
+                <p class="caption">HMTI DPC UBSI Cimone</p>
+            </div>
+            <div class="gallery-item" data-aos="zoom-in" data-aos-duration="1000">
+                <img src="kegiatan1/kegiatan1-4.jpg" alt="Foto 3" onclick="openModal(this)">
+                <p class="caption">HMTI DPC UBSI Cikarang</p>
+            </div>
+            <div class="gallery-item" data-aos="zoom-in" data-aos-duration="1000">
+                <img src="kegiatan1/kegiatan1-5.jpg" alt="Foto 3" onclick="openModal(this)">
+                <p class="caption">HMTI DPC UBSI Margonda, dan Fatmawati</p>
+            </div>
+            <div class="gallery-item" data-aos="zoom-in" data-aos-duration="1000">
+                <img src="kegiatan1/kegiatan1-6.jpg" alt="Foto 3" onclick="openModal(this)">
+                <p class="caption">HMTI DPC UBSI Kalimalang, dan Jatiwaringin</p>
+            </div>
+            <!-- Tambahkan lebih banyak foto sesuai kebutuhan -->
+        </div>
+        <div id="imageModal" class="modal">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img class="modal-content" id="modalImage">
+            <div id="caption"></div>
+        </div>
+    </section>
+
+    <!-- Deskripsi Kegiatan -->
+    <section id="description">
+        <h2 data-aos="fade-up" data-aos-duration="1000">SOSIALISASI HMTI UBSI KEPADA MAHASISWA/I BARU 2024</h2>
+        <p data-aos="fade-right" data-aos-duration="1000">
+            Jakarta, 15 Oktober 2024 - Himpunan Mahasiswa Teknologi Informasi adalah salah satu Ormawa yang ada di Universitas Bina Sarana Informatika yang ditujukan untuk Mahasiswa/i program studi Teknologi Informasi. HMTI mengadakan kegiatan sosialisasi sejak tanggal 01 - 15 Oktober 2024. Acara ini bertujuan untuk memperkenalkan tentang keseluruhan yang ada di dalam organisasi.
+        </br></br>
+            "Melalui sosialisasi ini, kami berharap Mahasiswa dapat lebih memahami tentang HMTI dan bagaimana mereka bisa berkontribusi atau mendapatkan manfaat dari organisasi ini," ujar Muhamad Sadam Ikhwanudin (Ketua umum HMTI UBSI).
+        </br></br>
+            Kegiatan ini diakhiri dengan sesi tanya jawab, di mana Mahasiswa/i diberi kesempatan untuk berinteraksi langsung dengan para pengurus HMTI dan mendapatkan informasi lebih lanjut tentang keterlibatan mereka terhadap HMTI nantinya saat.
+        </br></br>
+            Best Regards,</br>
+            Div. Kominfo</br>
+            Dewan Pimpinan Pusat HMTI</br>
+            Tunas Okta Bintang Mumpuni</br>
+        </p>
+    </section>
+
+    <section id="back-button">
+        <button onclick="history.back()">Kembali ke Halaman Sebelumnya</button>
+    </section>
+
+    <!-- Kontak Kami -->
+    <section id="contact">
+        <h2>Kontak Kami</h2>
+        <p>Email: hmti@bsi.ac.id</p>
+        <p>Alamat : Jl. Kramat raya no.98, Jakarta, Indonesia 10440</p>
+        <a href="https://www.instagram.com/hmti.ubsi_" target="_blank" class="instagram-icon">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram Icon">
+        </a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 HMTI UBSI</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script>
+        function openModal(image) {
+            // Tampilkan modal
+            const modal = document.getElementById("imageModal");
+            modal.style.display = "flex";
+    
+            // Perbarui konten modal
+            const modalImage = document.getElementById("modalImage");
+            const captionText = document.getElementById("caption");
+    
+            modalImage.src = image.src;
+            captionText.innerHTML = image.nextElementSibling.innerHTML;
+        }
+    
+        function closeModal() {
+            // Sembunyikan modal
+            const modal = document.getElementById("imageModal");
+            modal.style.display = "none";
+        }
+    </script>
+</body>
+</html>
