@@ -69,7 +69,7 @@ section {
 }
 
 #home {
-  background-image: url(assets/backgroundhmti2.jpg);
+  background-image: url(assets/backgroundhmti3.jpg);
   border-image: fill 0 linear-gradient(rgba(217, 214, 214, 0.2),#000);
   background-size: cover;
   object-fit: cover;
