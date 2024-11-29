@@ -69,7 +69,7 @@ section {
 }
 
 #home {
-  background-image: url(/HMTI-UBSI/assets/backgroundhmti3.jpg);
+  background-image: url(../assets/backgroundhmti3.jpg);
   border-image: fill 0 linear-gradient(rgba(217, 214, 214, 0.2),#000);
   background-size: cover;
   z-index: 1000;
