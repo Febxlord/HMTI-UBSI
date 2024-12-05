@@ -360,14 +360,28 @@
     </div>
 
     <!-- Contact Section -->
-    <section id="contact">
-        <h2>Kontak Kami</h2>
-        <p>Email: hmti@bsi.ac.id</p>
-        <p>Alamat : Jl. Kramat raya no.98, Jakarta, Indonesia 10440</p>
-    </br>
-    <a href="https://www.instagram.com/hmti.ubsi_" target="_blank" class="instagram-icon">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram Icon">
-    </a>
+    <section id="bawah">
+        <div class="kontak">
+            <h2>Kontak Kami</h2>
+            <p>Email: hmti@bsi.ac.id</p>
+            <p>Alamat : Jl. Kramat raya no.98, Jakarta, Indonesia 10440</p>
+            </br>
+            <a href="https://www.instagram.com/hmti.ubsi_" target="_blank" class="instagram-icon">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram Icon">
+            </a>
+        </div>
+        <div class="saran">
+        <h3>Kotak Saran</h3>
+        <form action="saran.php" method="POST">
+                <label for="nama">Nama:</label>
+                <input type="text" id="nama" name="nama" placeholder="Nama (optional)">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required placeholder="Email">
+                <label for="saran">Saran:</label>
+                <textarea id="saran" name="saran" rows="5" required placeholder="Tulis saran Anda di sini"></textarea>
+                <button type="submit">Kirim</button>
+            </form>
+        </div>
     </section>
 
     <!-- Footer -->
