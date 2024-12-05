@@ -319,3 +319,72 @@ footer {
   background: #333;
   color: white;
 }
+
+#bawah {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.saran {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+/* Judul */
+.saran h1 {
+  margin-bottom: 20px;
+  color: #333333;
+}
+
+/* Label */
+.saran label {
+  display: block;
+  margin: 10px 0 5px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #555555;
+}
+
+/* Input dan textarea */
+.saran input,
+.saran textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #333333;
+  background-color: #fefefe;
+}
+
+/* Input dan textarea focus */
+.saran input:focus,
+.saran textarea:focus {
+  border-color: #007bff;
+  outline: none;
+  background-color: #f9f9ff;
+}
+
+/* Tombol kirim */
+.saran button {
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* Tombol kirim hover */
+.saran button:hover {
+  background-color: #0056b3;
+}
